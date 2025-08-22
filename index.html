@@ -3,81 +3,322 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jeenisha Consultancy — Study Abroad</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <title>Jeenisha Consultancy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    body { font-family: 'Poppins', sans-serif; }
-    .glass { background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); }
+    *{margin:0;padding:0;box-sizing:border-box;font-family: 'Poppins', sans-serif;}
+    body{
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color:#fff;
+      text-align:center;
+      overflow-x:hidden;
+    }
+    .logo img{
+      width:160px;
+      animation: float 3s ease-in-out infinite;
+      margin-top:30px;
+    }
+    @keyframes float {
+      0%,100%{transform: translateY(0);}
+      50%{transform: translateY(-15px);}
+    }
+    h1{font-size:2.2rem;margin-top:15px;letter-spacing:2px;}
+    p{margin-top:5px;font-size:1rem;opacity:0.9;}
+
+    .btn a{
+      display:inline-block;
+      margin:15px 8px;
+      padding:12px 25px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:600;
+      background:#ffd700;
+      color:#000;
+      transition:0.3s;
+      box-shadow:0 4px 15px rgba(0,0,0,0.4);
+    }
+    .btn a:hover{background:#fff;transform:scale(1.05);}
+
+    .social{margin:25px 0;}
+    .social img{margin:0 12px;transition:0.3s;}
+    .social img:hover{transform:scale(1.2);}
+
+    /* Services Section */
+    .services{
+      margin:60px auto 40px;
+      padding:20px;
+      max-width:1000px;
+    }
+    .services h2{
+      font-size:1.8rem;
+      margin-bottom:25px;
+      color:#ffd700;
+    }
+    .service-boxes{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:25px;
+    }
+    .service{
+      background:rgba(255,255,255,0.08);
+      padding:20px;
+      border-radius:15px;
+      width:280px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.4);
+      transition:0.3s;
+    }
+    .service:hover{transform:translateY(-8px);}
+    .service h3{color:#ffd700;margin-bottom:10px;font-size:1.2rem;}
+    .service p{font-size:0.95rem;opacity:0.9;}
+
+    /* Testimonials Section */
+    .testimonials{
+      margin:60px auto;
+      padding:40px 20px;
+      max-width:1100px;
+    }
+    .testimonials h2{
+      font-size:1.8rem;
+      margin-bottom:20px;
+      color:#ffd700;
+    }
+    .slider-wrapper{
+      position:relative;
+      overflow:hidden;
+      width:100%;
+      max-width:900px;
+      margin:0 auto;
+    }
+    .slider{
+      display:flex;
+      transition: transform 0.7s ease-in-out;
+    }
+    .card{
+      flex:0 0 100%;
+      background:rgba(255,255,255,0.08);
+      padding:25px;
+      border-radius:15px;
+      text-align:center;
+      box-shadow:0 4px 12px rgba(0,0,0,0.4);
+    }
+    .card img{
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      margin-bottom:12px;
+    }
+    .card h3{font-size:1.2rem;margin-bottom:6px;color:#ffd700;}
+    .card p{font-size:0.95rem;opacity:0.85;}
+
+    /* Stats Section Carousel */
+    .stats-wrapper{
+      margin-top:40px;
+      overflow:hidden;
+      max-width:900px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .stats-slider{
+      display:flex;
+      transition: transform 0.7s ease-in-out;
+    }
+    .stat-card{
+      flex:0 0 100%;
+      background:#123;
+      padding:25px;
+      border-radius:15px;
+      text-align:center;
+      box-shadow:0 4px 12px rgba(0,0,0,0.5);
+    }
+    .stat-card h3{
+      font-size:1.3rem;
+      color:#ffd700;
+      margin-bottom:8px;
+    }
+    .stat-card p{
+      font-size:0.95rem;
+      opacity:0.9;
+    }
+
+    /* Dots for Sliders */
+    .dots{
+      display:flex;
+      justify-content:center;
+      margin-top:15px;
+      gap:10px;
+    }
+    .dot{
+      width:12px;
+      height:12px;
+      border-radius:50%;
+      background:#777;
+      cursor:pointer;
+      transition:0.3s;
+    }
+    .dot.active{
+      background:#ffd700;
+      transform:scale(1.2);
+    }
+
+    /* Background animation */
+    .bg-animation{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;overflow:hidden;}
+    .circle{position:absolute;border-radius:50%;background:rgba(255,255,255,0.08);animation: move 20s linear infinite;}
+    .circle:nth-child(1){width:120px;height:120px;top:10%;left:15%;animation-duration:22s;}
+    .circle:nth-child(2){width:80px;height:80px;top:70%;left:60%;animation-duration:18s;}
+    .circle:nth-child(3){width:150px;height:150px;top:40%;left:80%;animation-duration:25s;}
+    @keyframes move{0%{transform:translateY(0);}100%{transform:translateY(-1000px);}}
   </style>
 </head>
-<body class="bg-gradient-to-br from-blue-900 via-indigo-900 to-black text-white overflow-x-hidden">
+<body>
+  <div class="bg-animation">
+    <div class="circle"></div><div class="circle"></div><div class="circle"></div>
+  </div>
 
-  <!-- Hero -->
-  <section class="relative min-h-screen flex items-center justify-center text-center px-4">
-    <img src="pradeep.PNG" class="absolute inset-0 w-full h-full object-cover opacity-30" alt="Hero Bg">
-    <div class="relative z-10 max-w-3xl" data-aos="fade-up">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">Study Abroad With Confidence</h1>
-      <p class="text-lg md:text-xl mb-6">Trusted guidance for admission, visa & scholarships in top universities worldwide.</p>
-      <a href="https://wa.me/919999999999" class="px-6 py-3 bg-green-500 hover:bg-green-600 text-lg font-semibold rounded-full shadow-lg">Book Free Counselling</a>
-    </div>
-  </section>
+  <!-- Logo & Heading -->
+  <div class="logo">
+    <img src="aa.jpeg" alt="Jeenisha Consultancy Logo">
+  </div>
+  <h1>JEENISHA CONSULTANCY</h1>
+  <p>Your Trusted Consultancy Partner for UK & Ireland Admissions</p>
+  
+  <!-- Buttons -->
+  <div class="btn">
+    <a href="https://jeenishaconsultancy.com/" target="_blank">Visit Website</a>
+    <a href="#enroll">Enroll Now</a>
+  </div>
 
-  <!-- Why Choose Us -->
-  <section class="py-16 px-6 md:px-20 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-12" data-aos="fade-up">Why Choose Us?</h2>
-    <div class="grid md:grid-cols-4 gap-8">
-      <div class="glass p-6 rounded-2xl" data-aos="fade-up"><h3 class="text-xl font-semibold mb-2">7+ Years Expertise</h3><p>Trusted by 2000+ students globally.</p></div>
-      <div class="glass p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="100"><h3 class="text-xl font-semibold mb-2">Global Universities</h3><p>Connections with top institutes worldwide.</p></div>
-      <div class="glass p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="200"><h3 class="text-xl font-semibold mb-2">Visa Success</h3><p>High approval rate with expert documentation.</p></div>
-      <div class="glass p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="300"><h3 class="text-xl font-semibold mb-2">Scholarship Aid</h3><p>Guidance for top scholarships & funding.</p></div>
-    </div>
-  </section>
+  <!-- Social Icons -->
+  <div class="social">
+    <a href="https://wa.me/919876543210" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="40" alt="WhatsApp">
+    </a>
+    <a href="https://instagram.com/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="40" alt="Instagram">
+    </a>
+    <a href="mailto:info@jeenishaconsultancy.com">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" width="40" alt="Email">
+    </a>
+    <a href="https://youtube.com/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="80" alt="YouTube">
+    </a>
+  </div>
 
-  <!-- Proof / Visa Approvals -->
-  <section class="py-16 px-6 md:px-20 bg-white bg-opacity-5">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">Student Visa Approvals</h2>
-    <div class="grid md:grid-cols-5 gap-6">
-      <div class="glass p-4 rounded-xl text-center" data-aos="zoom-in"><img src="https://via.placeholder.com/120" class="mx-auto mb-2 rounded-full"><p>Riya – Canada Visa</p></div>
-      <div class="glass p-4 rounded-xl text-center" data-aos="zoom-in" data-aos-delay="100"><img src="https://via.placeholder.com/120" class="mx-auto mb-2 rounded-full"><p>Amit – UK Visa</p></div>
-      <div class="glass p-4 rounded-xl text-center" data-aos="zoom-in" data-aos-delay="200"><img src="https://via.placeholder.com/120" class="mx-auto mb-2 rounded-full"><p>Sneha – Australia Visa</p></div>
-      <div class="glass p-4 rounded-xl text-center" data-aos="zoom-in" data-aos-delay="300"><img src="https://via.placeholder.com/120" class="mx-auto mb-2 rounded-full"><p>Raj – USA Visa</p></div>
-      <div class="glass p-4 rounded-xl text-center" data-aos="zoom-in" data-aos-delay="400"><img src="https://via.placeholder.com/120" class="mx-auto mb-2 rounded-full"><p>Priya – Germany Visa</p></div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="py-16 px-6 md:px-20">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">What Our Students Say</h2>
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide glass p-8 rounded-2xl" data-aos="fade-up"><p>“Jeenisha helped me with my UK admission and visa — very smooth process.”</p><h4 class="mt-4 font-semibold">— Ramesh</h4></div>
-        <div class="swiper-slide glass p-8 rounded-2xl"><p>“Got my Canadian student visa without stress. Highly recommended!”</p><h4 class="mt-4 font-semibold">— Anjali</h4></div>
-        <div class="swiper-slide glass p-8 rounded-2xl"><p>“Best consultancy for study abroad, very professional guidance.”</p><h4 class="mt-4 font-semibold">— Mohit</h4></div>
+  <!-- Services Section -->
+  <div class="services">
+    <h2>Our Services</h2>
+    <div class="service-boxes">
+      <div class="service">
+        <h3>Student Visa</h3>
+        <p>End-to-end support for global education visas.</p>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="service">
+        <h3>Work Permits</h3>
+        <p>Professional guidance proven results.</p>
+      </div>
+      <div class="service">
+        <h3>Travel Support</h3>
+        <p>Flights, accommodation, and complete guidance.</p>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <!-- CTA -->
-  <section class="py-20 px-6 md:px-20 text-center bg-gradient-to-r from-indigo-700 to-purple-800">
-    <h2 class="text-3xl md:text-4xl font-bold mb-4">Start Your Journey Abroad Today</h2>
-    <p class="mb-6 text-lg">Book your free counselling session now and move one step closer to your dream university.</p>
-    <a href="https://wa.me/919999999999" class="px-8 py-3 bg-green-500 hover:bg-green-600 text-lg font-semibold rounded-full shadow-lg">Chat on WhatsApp</a>
-  </section>
+  <!-- Testimonials Section -->
+  <div id="enroll" class="testimonials">
+    <h2>Student Proof & Experience</h2>
+    <div class="slider-wrapper">
+      <div class="slider" id="slider">
+        <div class="card">
+          <img src="a.png" alt="Student">
+          <h3>Mandera Muwal</h3>
+          <p>"Thanks to Jeenisha Consultancy, I got admission in the UK for January intake without hassle."</p>
+        </div>
+        <div class="card">
+          <img src="b.png" alt="Student">
+          <h3>Surendra Netar</h3>
+          <p>"Very professional and trustworthy. Helped me secure my Ireland student visa successfully."</p>
+        </div>
+        <div class="card">
+          <img src="c.png" alt="Student">
+          <h3>Jhabar Choudhary</h3>
+          <p>"Their guidance was excellent. Smooth process and genuine support throughout the journey."</p>
+        </div>
+      </div>
+    </div>
+    <!-- Dots for Testimonials -->
+    <div class="dots" id="testimonialDots">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
 
-  <!-- Footer -->
-  <footer class="py-10 px-6 md:px-20 text-center bg-black bg-opacity-50">
-    <p>© 2025 Jeenisha Consultancy. All rights reserved.</p>
-    <p class="mt-2">Contact: info@jeenishaconsultancy.com | +91 99999 99999</p>
-  </footer>
+    <!-- Stats Carousel -->
+    <div class="stats-wrapper">
+      <div class="stats-slider" id="statsSlider">
+        <div class="stat-card">
+          <h3>7+ Years</h3>
+          <p>Experience in multiple countries</p>
+        </div>
+        <div class="stat-card">
+          <h3>3K+ Users</h3>
+          <p>Active students around the world</p>
+        </div>
+        <div class="stat-card">
+          <h3>18+</h3>
+          <p>Best award achievements</p>
+        </div>
+      </div>
+      <!-- Dots for Stats -->
+      <div class="dots" id="statsDots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+  </div>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init({ once: true, duration: 1000 });</script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script>
-    var swiper = new Swiper(".mySwiper", { pagination: { el: ".swiper-pagination", clickable: true }, autoplay: { delay: 4000 } });
+    // Testimonials Slider with Dots
+    const slider = document.getElementById('slider');
+    const testimonialCards = document.querySelectorAll('.card');
+    const testimonialDots = document.querySelectorAll('#testimonialDots .dot');
+    let tIndex = 0;
+
+    function showTestimonial(n){
+      tIndex = n;
+      slider.style.transform = `translateX(-${tIndex * 100}%)`;
+      testimonialDots.forEach((dot,i)=> dot.classList.toggle("active", i===tIndex));
+    }
+    function autoTestimonial(){
+      tIndex++;
+      if(tIndex >= testimonialCards.length){ tIndex = 0; }
+      showTestimonial(tIndex);
+    }
+    setInterval(autoTestimonial, 4000);
+    testimonialDots.forEach((dot,i)=>{
+      dot.addEventListener("click", ()=> showTestimonial(i));
+    });
+
+    // Stats Slider with Dots
+    const statsSlider = document.getElementById('statsSlider');
+    const statCards = document.querySelectorAll('.stat-card');
+    const statsDots = document.querySelectorAll('#statsDots .dot');
+    let statIndex = 0;
+
+    function showStat(n){
+      statIndex = n;
+      statsSlider.style.transform = `translateX(-${statIndex * 100}%)`;
+      statsDots.forEach((dot,i)=> dot.classList.toggle("active", i===statIndex));
+    }
+    function autoStatSlide(){
+      statIndex++;
+      if(statIndex >= statCards.length){ statIndex = 0; }
+      showStat(statIndex);
+    }
+    setInterval(autoStatSlide, 3000);
+    statsDots.forEach((dot,i)=>{
+      dot.addEventListener("click", ()=> showStat(i));
+    });
   </script>
 </body>
 </html>
