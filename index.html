@@ -18,23 +18,14 @@
       animation: float 3s ease-in-out infinite;
       margin-top:30px;
     }
-    @keyframes float {
-      0%,100%{transform: translateY(0);}
-      50%{transform: translateY(-15px);}
-    }
+    @keyframes float {0%,100%{transform: translateY(0);}50%{transform: translateY(-15px);}}
     h1{font-size:2.2rem;margin-top:15px;letter-spacing:2px;}
     p{margin-top:5px;font-size:1rem;opacity:0.9;}
 
     .btn a{
-      display:inline-block;
-      margin:15px 8px;
-      padding:12px 25px;
-      border-radius:30px;
-      text-decoration:none;
-      font-weight:600;
-      background:#ffd700;
-      color:#000;
-      transition:0.3s;
+      display:inline-block;margin:15px 8px;padding:12px 25px;
+      border-radius:30px;text-decoration:none;font-weight:600;
+      background:#ffd700;color:#000;transition:0.3s;
       box-shadow:0 4px 15px rgba(0,0,0,0.4);
     }
     .btn a:hover{background:#fff;transform:scale(1.05);}
@@ -44,152 +35,56 @@
     .social img:hover{transform:scale(1.2);}
 
     /* Services Section */
-    .services{
-      margin:60px auto 40px;
-      padding:20px;
-      max-width:1000px;
-    }
-    .services h2{
-      font-size:1.8rem;
-      margin-bottom:25px;
-      color:#ffd700;
-    }
-    .service-boxes{
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:25px;
-    }
+    .services{margin:60px auto 40px;padding:20px;max-width:1000px;}
+    .services h2{font-size:1.8rem;margin-bottom:25px;color:#ffd700;}
+    .service-boxes{display:flex;justify-content:center;flex-wrap:wrap;gap:25px;}
     .service{
-      background:rgba(255,255,255,0.08);
-      padding:20px;
-      border-radius:15px;
-      width:280px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.4);
-      transition:0.3s;
+      background:rgba(255,255,255,0.08);padding:20px;border-radius:15px;
+      width:280px;box-shadow:0 4px 12px rgba(0,0,0,0.4);transition:0.3s;
     }
     .service:hover{transform:translateY(-8px);}
     .service h3{color:#ffd700;margin-bottom:10px;font-size:1.2rem;}
     .service p{font-size:0.95rem;opacity:0.9;}
 
-    /* Testimonials Section */
-    .testimonials{
-      margin:60px auto;
-      padding:40px 20px;
-      max-width:1100px;
-    }
-    .testimonials h2{
-      font-size:1.8rem;
-      margin-bottom:20px;
-      color:#ffd700;
-    }
-    .slider-wrapper{
-      position:relative;
-      overflow:hidden;
-      width:100%;
-      max-width:900px;
-      margin:0 auto;
-    }
-    .slider{
-      display:flex;
-      transition: transform 0.7s ease-in-out;
-    }
+    /* Testimonials */
+    .testimonials{margin:60px auto;padding:40px 20px;max-width:1100px;}
+    .testimonials h2{font-size:1.8rem;margin-bottom:20px;color:#ffd700;}
+    .slider-wrapper{position:relative;overflow:hidden;width:100%;max-width:900px;margin:0 auto;}
+    .slider{display:flex;transition: transform 0.7s ease-in-out;}
     .card{
-      flex:0 0 100%;
-      background:rgba(255,255,255,0.08);
-      padding:25px;
-      border-radius:15px;
-      text-align:center;
+      flex:0 0 100%;background:rgba(255,255,255,0.08);
+      padding:25px;border-radius:15px;text-align:center;
       box-shadow:0 4px 12px rgba(0,0,0,0.4);
     }
-    .card img{
-      width:60px;
-      height:60px;
-      border-radius:50%;
-      margin-bottom:12px;
-    }
+    .card img{width:60px;height:60px;border-radius:50%;margin-bottom:12px;}
     .card h3{font-size:1.2rem;margin-bottom:6px;color:#ffd700;}
     .card p{font-size:0.95rem;opacity:0.85;}
 
-    /* Stats Section Carousel */
-    .stats-wrapper{
-      margin-top:40px;
-      overflow:hidden;
-      max-width:900px;
-      margin-left:auto;
-      margin-right:auto;
-    }
-    .stats-slider{
-      display:flex;
-      transition: transform 0.7s ease-in-out;
-    }
+    /* Stats */
+    .stats-wrapper{margin-top:40px;overflow:hidden;max-width:900px;margin-left:auto;margin-right:auto;}
+    .stats-slider{display:flex;transition: transform 0.7s ease-in-out;}
     .stat-card{
-      flex:0 0 100%;
-      background:#123;
-      padding:25px;
-      border-radius:15px;
-      text-align:center;
-      box-shadow:0 4px 12px rgba(0,0,0,0.5);
+      flex:0 0 100%;background:#123;padding:25px;border-radius:15px;
+      text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.5);
     }
-    .stat-card h3{
-      font-size:1.3rem;
-      color:#ffd700;
-      margin-bottom:8px;
-    }
-    .stat-card p{
-      font-size:0.95rem;
-      opacity:0.9;
-    }
+    .stat-card h3{font-size:1.3rem;color:#ffd700;margin-bottom:8px;}
+    .stat-card p{font-size:0.95rem;opacity:0.9;}
 
     /* Dots */
-    .dots{
-      display:flex;
-      justify-content:center;
-      margin-top:15px;
-      gap:10px;
-    }
+    .dots{display:flex;justify-content:center;margin-top:15px;gap:10px;}
     .dot{
-      width:12px;
-      height:12px;
-      border-radius:50%;
-      background:#777;
-      cursor:pointer;
-      transition:0.3s;
+      width:12px;height:12px;border-radius:50%;background:#777;
+      cursor:pointer;transition:0.3s;
     }
-    .dot.active{
-      background:#ffd700;
-      transform:scale(1.2);
-    }
+    .dot.active{background:#ffd700;transform:scale(1.2);}
 
     /* Universities Section */
-    .universities{
-      margin:60px auto;
-      padding:20px;
-      max-width:1100px;
-    }
-    .universities h2{
-      font-size:1.8rem;
-      margin-bottom:25px;
-      color:#ffd700;
-    }
-    .university-slider{
-      display:flex;
-      gap:30px;
-      animation: scroll 25s linear infinite;
-    }
-    .university-card{
-      flex:0 0 auto;
-      background:rgba(255,255,255,0.08);
-      padding:15px 25px;
-      border-radius:20px;
-      font-weight:600;
-      color:#fff;
-      white-space:nowrap;
+    .universities{margin:60px auto;padding:20px;max-width:1100px;}
+    .universities h2{font-size:1.8rem;margin-bottom:25px;color:#ffd700;}
+    #universitySlider .card{
+      padding:40px;font-size:1.2rem;background:rgba(255,255,255,0.08);
+      border-radius:15px;color:#fff;font-weight:600;
       box-shadow:0 4px 12px rgba(0,0,0,0.4);
-    }
-    @keyframes scroll{
-      from{transform:translateX(100%);}
-      to{transform:translateX(-220%);}
     }
 
     /* Background animation */
@@ -202,14 +97,10 @@
   </style>
 </head>
 <body>
-  <div class="bg-animation">
-    <div class="circle"></div><div class="circle"></div><div class="circle"></div>
-  </div>
+  <div class="bg-animation"><div class="circle"></div><div class="circle"></div><div class="circle"></div></div>
 
-  <!-- Logo & Heading -->
-  <div class="logo">
-    <img src="aa.jpeg" alt="Jeenisha Consultancy Logo">
-  </div>
+  <!-- Logo -->
+  <div class="logo"><img src="aa.jpeg" alt="Jeenisha Consultancy Logo"></div>
   <h1>JEENISHA CONSULTANCY</h1>
   <p>Your Trusted Consultancy Partner for UK & Ireland Admissions</p>
   
@@ -219,42 +110,25 @@
     <a href="https://wa.me/917850977694" target="_blank">Enroll Now</a>
   </div>
 
-  <!-- Social Icons -->
+  <!-- Social -->
   <div class="social">
-    <a href="https://wa.me/917850977694" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="40" alt="WhatsApp">
-    </a>
-    <a href="https://www.instagram.com/jeenishaconsultancy?igsh=YmNpMTJmMXV1amx3" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.PNG" width="40" alt="Instagram">
-    </a>
-    <a href="mailto:info@jeenishaconsultancy.com">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" width="40" alt="Email">
-    </a>
-    <a href="https://youtube.com/" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="80" alt="YouTube">
-    </a>
+    <a href="https://wa.me/917850977694" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="40"></a>
+    <a href="https://www.instagram.com/jeenishaconsultancy?igsh=YmNpMTJmMXV1amx3" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="40"></a>
+    <a href="mailto:info@jeenishaconsultancy.com"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" width="40"></a>
+    <a href="https://youtube.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" width="80"></a>
   </div>
 
-  <!-- Services Section -->
+  <!-- Services -->
   <div class="services">
     <h2>Our Services</h2>
     <div class="service-boxes">
-      <div class="service">
-        <h3>Student Visa</h3>
-        <p>End-to-end support for global education visas.</p>
-      </div>
-      <div class="service">
-        <h3>Work Permits</h3>
-        <p>Professional guidance with proven results.</p>
-      </div>
-      <div class="service">
-        <h3>Travel Support</h3>
-        <p>Flights, accommodation, and complete guidance.</p>
-      </div>
+      <div class="service"><h3>Student Visa</h3><p>End-to-end support for global education visas.</p></div>
+      <div class="service"><h3>Work Permits</h3><p>Professional guidance with proven results.</p></div>
+      <div class="service"><h3>Travel Support</h3><p>Flights, accommodation, and complete guidance.</p></div>
     </div>
   </div>
 
-  <!-- Testimonials Section -->
+  <!-- Testimonials -->
   <div id="enroll" class="testimonials">
     <h2>Student Proof & Experience</h2>
     <div class="slider-wrapper">
@@ -268,92 +142,71 @@
         <div class="card"><img src="g.PNG"><h3>Harendra Dhaka</h3><p>"Highly recommended! My Ireland admission was completed without stress."</p></div>
       </div>
     </div>
-    <!-- Dots for Testimonials -->
-    <div class="dots" id="testimonialDots">
-      <div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
-    </div>
+    <div class="dots" id="testimonialDots"><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
 
-    <!-- Stats Carousel -->
+    <!-- Stats -->
     <div class="stats-wrapper">
       <div class="stats-slider" id="statsSlider">
         <div class="stat-card"><h3>7+ Years</h3><p>Experience in multiple countries</p></div>
         <div class="stat-card"><h3>3K+ Users</h3><p>Active students around the world</p></div>
         <div class="stat-card"><h3>18+</h3><p>Best award achievements</p></div>
       </div>
-      <div class="dots" id="statsDots">
-        <div class="dot active"></div><div class="dot"></div><div class="dot"></div>
-      </div>
+      <div class="dots" id="statsDots"><div class="dot active"></div><div class="dot"></div><div class="dot"></div></div>
     </div>
   </div>
 
-  <!-- Universities Section -->
+  <!-- Universities -->
   <div class="universities">
     <h2>Top Universities We Work With</h2>
-    <div class="university-slider">
-      <div class="university-card">University of Alberta</div>
-      <div class="university-card">Toronto Metropolitan University</div>
-      <div class="university-card">University of British Columbia (UBC)</div>
-      <div class="university-card">University of Toronto</div>
-      <div class="university-card">York University</div>
-      <div class="university-card">King’s (Western University – Canada)</div>
-      <div class="university-card">University of Victoria</div>
-      <div class="university-card">McGill University</div>
-      <div class="university-card">University of Waterloo</div>
-      <div class="university-card">Queen’s University</div>
-      <div class="university-card">McMaster University</div>
-      <div class="university-card">Simon Fraser University (SFU)</div>
-      <div class="university-card">Saint Mary’s University</div>
-      <div class="university-card">University of Ottawa</div>
-      <div class="university-card">University of Guelph</div>
-      <div class="university-card">University Canada West</div>
-      <div class="university-card">KPU (Kwantlen Polytechnic University)</div>
-      <div class="university-card">Mount Saint Vincent University</div>
-      <div class="university-card">City University in Canada</div>
-      <div class="university-card">Ashoka University</div>
-      <div class="university-card">Cornell University</div>
-      <div class="university-card">Dalhousie University</div>
-      <div class="university-card">Harvard University</div>
-      <div class="university-card">Krea University</div>
+    <div class="slider-wrapper">
+      <div class="slider" id="universitySlider">
+        <div class="card"><h3>University of Alberta</h3></div>
+        <div class="card"><h3>Toronto Metropolitan University</h3></div>
+        <div class="card"><h3>University of British Columbia (UBC)</h3></div>
+        <div class="card"><h3>University of Toronto</h3></div>
+        <div class="card"><h3>York University</h3></div>
+        <div class="card"><h3>McGill University</h3></div>
+        <div class="card"><h3>University of Waterloo</h3></div>
+        <div class="card"><h3>Queen’s University</h3></div>
+        <div class="card"><h3>Harvard University</h3></div>
+        <div class="card"><h3>Cornell University</h3></div>
+      </div>
+    </div>
+    <div class="dots" id="universityDots">
+      <div class="dot active"></div><div class="dot"></div><div class="dot"></div>
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+      <div class="dot"></div>
     </div>
   </div>
 
   <script>
-    // Testimonials Slider
+    // Testimonials
     const slider = document.getElementById('slider');
     const testimonialCards = document.querySelectorAll('.card');
     const testimonialDots = document.querySelectorAll('#testimonialDots .dot');
     let tIndex = 0;
-    function showTestimonial(n){
-      tIndex = n;
-      slider.style.transform = `translateX(-${tIndex * 100}%)`;
-      testimonialDots.forEach((dot,i)=> dot.classList.toggle("active", i===tIndex));
-    }
-    function autoTestimonial(){
-      tIndex++;
-      if(tIndex >= testimonialCards.length){ tIndex = 0; }
-      showTestimonial(tIndex);
-    }
-    setInterval(autoTestimonial, 4000);
-    testimonialDots.forEach((dot,i)=> dot.addEventListener("click", ()=> showTestimonial(i)));
+    function showTestimonial(n){tIndex=n;slider.style.transform=`translateX(-${tIndex*100}%)`;testimonialDots.forEach((d,i)=>d.classList.toggle("active",i===tIndex));}
+    function autoTestimonial(){tIndex++;if(tIndex>=testimonialCards.length){tIndex=0;}showTestimonial(tIndex);}setInterval(autoTestimonial,4000);
+    testimonialDots.forEach((dot,i)=>dot.addEventListener("click",()=>showTestimonial(i)));
 
-    // Stats Slider
-    const statsSlider = document.getElementById('statsSlider');
-    const statCards = document.querySelectorAll('.stat-card');
-    const statsDots = document.querySelectorAll('#statsDots .dot');
-    let statIndex = 0;
-    function showStat(n){
-      statIndex = n;
-      statsSlider.style.transform = `translateX(-${statIndex * 100}%)`;
-      statsDots.forEach((dot,i)=> dot.classList.toggle("active", i===statIndex));
-    }
-    function autoStatSlide(){
-      statIndex++;
-      if(statIndex >= statCards.length){ statIndex = 0; }
-      showStat(statIndex);
-    }
-    setInterval(autoStatSlide, 3000);
-    statsDots.forEach((dot,i)=> dot.addEventListener("click", ()=> showStat(i)));
+    // Stats
+    const statsSlider=document.getElementById('statsSlider');
+    const statCards=document.querySelectorAll('.stat-card');
+    const statsDots=document.querySelectorAll('#statsDots .dot');
+    let statIndex=0;
+    function showStat(n){statIndex=n;statsSlider.style.transform=`translateX(-${statIndex*100}%)`;statsDots.forEach((d,i)=>d.classList.toggle("active",i===statIndex));}
+    function autoStatSlide(){statIndex++;if(statIndex>=statCards.length){statIndex=0;}showStat(statIndex);}setInterval(autoStatSlide,3000);
+    statsDots.forEach((dot,i)=>dot.addEventListener("click",()=>showStat(i)));
+
+    // Universities
+    const universitySlider=document.getElementById('universitySlider');
+    const universityCards=document.querySelectorAll('#universitySlider .card');
+    const universityDots=document.querySelectorAll('#universityDots .dot');
+    let uIndex=0;
+    function showUniversity(n){uIndex=n;universitySlider.style.transform=`translateX(-${uIndex*100}%)`;universityDots.forEach((d,i)=>d.classList.toggle("active",i===uIndex));}
+    function autoUniversity(){uIndex++;if(uIndex>=universityCards.length){uIndex=0;}showUniversity(uIndex);}setInterval(autoUniversity,3000);
+    universityDots.forEach((dot,i)=>dot.addEventListener("click",()=>showUniversity(i)));
   </script>
 </body>
 </html>
-
